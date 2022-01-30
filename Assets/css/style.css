@@ -57,3 +57,11 @@ li:hover {
 #fiveDayForecast {
     padding-bottom: 10px;
 }
+
+.bg-warning-strong {
+    background-color: orange;
+}
+
+.bg-danger-strong {
+    background-color: purple;
+}

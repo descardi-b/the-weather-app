@@ -18,6 +18,10 @@ console.log(nameInput);
 // target submit button
 const submitBtn = $("#submitBtn");
 
+// target uv index
+
+const uvIndex = $("#uvIndex");
+
 
 const citySearch = function () {
     cityName = nameInput[0].value;
@@ -68,6 +72,33 @@ const citySearch = function () {
                     const currentUvIndex = $("#currentUvIndexDescrip");
                     currentUvIndex.html(`${data.current.uvi}`);
                     currentUvIndex.className = "text-dark";
+
+                    // if statements for uv index class
+
+                    if (data.current.uvi <= 2) {
+                        uvIndex.removeClass("bg-primary");
+                        uvIndex.addClass("bg-success");
+                    }
+
+                    if (data.current.uvi > 3 && data.current.uvi <= 5) {
+                        uvIndex.removeClass("bg-primary");
+                        uvIndex.addClass("bg-warning");
+                    }
+
+                    if (data.current.uvi > 5 && data.current.uvi <= 7) {
+                        uvIndex.removeClass("bg-primary");
+                        uvIndex.addClass("bg-warning-strong");
+                    }
+
+                    if (data.current.uvi > 7 && data.current.uvi <= 10) {
+                        uvIndex.removeClass("bg-primary");
+                        uvIndex.addClass("bg-danger");
+                    }
+
+                    if (data.current.uvi > 10) {
+                        uvIndex.removeClass("bg-primary");
+                        uvIndex.addClass("bg-danger-strong");
+                    }
 
                     // convert temp to farenheit 
                     const tempFOne = parseInt((data.daily[1].temp.day) - 273.15) * 9 / 5 + 32;
@@ -152,6 +183,32 @@ savedCities.on("click", function () {
                     currentUvIndex = $("#currentUvIndexDescrip");
                     currentUvIndex.html(`${data.current.uvi}`);
                     currentUvIndex.className = "text-dark";
+
+                    // if statements for uv index class 
+                    if (data.current.uvi <= 2) {
+                        uvIndex.removeClass("bg-primary");
+                        uvIndex.addClass("bg-success");
+                    }
+
+                    if (data.current.uvi > 3 && data.current.uvi <= 5) {
+                        uvIndex.removeClass("bg-primary");
+                        uvIndex.addClass("bg-warning");
+                    }
+
+                    if (data.current.uvi > 5 && data.current.uvi <= 7) {
+                        uvIndex.removeClass("bg-primary");
+                        uvIndex.addClass("bg-warning-strong");
+                    }
+
+                    if (data.current.uvi > 7 && data.current.uvi <= 10) {
+                        uvIndex.removeClass("bg-primary");
+                        uvIndex.addClass("bg-danger");
+                    }
+
+                    if (data.current.uvi > 10) {
+                        uvIndex.removeClass("bg-primary");
+                        uvIndex.addClass("bg-danger-strong");
+                    }
 
                     // convert temp to farenheit 
                     const tempFOne = parseInt((data.daily[1].temp.day) - 273.15) * 9 / 5 + 32;
