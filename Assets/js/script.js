@@ -105,27 +105,27 @@ const citySearch = function () {
 
                     // five day forecast
                     const fiveDayTempOne = $("#fiveDayTempOne");
-                    fiveDayTempOne.html(`${tempFOne}°F`);
+                    fiveDayTempOne.html(`${tempFOne}°F, ${data.daily[1].weather[0].description}`);
                     fiveDayTempOne.className = "text-dark";
 
                     const tempFTwo = parseInt((data.daily[2].temp.day) - 273.15) * 9 / 5 + 32;
                     const fiveDayTempTwo = $("#fiveDayTempTwo");
-                    fiveDayTempTwo.html(`${tempFTwo}°F`);
+                    fiveDayTempTwo.html(`${tempFTwo}°F, ${data.daily[2].weather[0].description}`);
                     fiveDayTempTwo.className = "text-dark";
 
                     const tempFThree = parseInt((data.daily[3].temp.day) - 273.15) * 9 / 5 + 32;
                     const fiveDayTempThree = $("#fiveDayTempThree");
-                    fiveDayTempThree.html(`${tempFThree}°F`);
+                    fiveDayTempThree.html(`${tempFThree}°F, ${data.daily[3].weather[0].description}`);
                     fiveDayTempThree.className = "text-dark";
 
                     const tempFFour = parseInt((data.daily[4].temp.day) - 273.15) * 9 / 5 + 32;
                     const fiveDayTempFour = $("#fiveDayTempFour");
-                    fiveDayTempFour.html(`${tempFFour}°F`);
+                    fiveDayTempFour.html(`${tempFFour}°F, ${data.daily[4].weather[0].description}`);
                     fiveDayTempFour.className = "text-dark";
 
                     const tempFFive = parseInt((data.daily[5].temp.day) - 273.15) * 9 / 5 + 32;
                     const fiveDayTempFive = $("#fiveDayTempFive");
-                    fiveDayTempFive.html(`${tempFFive}°F`);
+                    fiveDayTempFive.html(`${tempFFive}°F, ${data.daily[5].weather[0].description}`);
                     fiveDayTempFive.className = "text-dark";
 
                 });
