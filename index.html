@@ -19,13 +19,7 @@
         <input type="text" class="input-bar border-primary rounded" id="nameInput" name="input">
         <button type="button" class="btn btn-light btn-outline-primary" id="submitBtn">Submit</button>
         <div class="cities">
-        <ul>
-            <li class="bg-primary rounded text-light savedCities" id="0">New York</li>
-            <li class="bg-primary rounded text-light savedCities" id="1">Los Angeles</li>
-            <li class="bg-primary rounded text-light savedCities" id="2">London</li>
-            <li class="bg-primary rounded text-light savedCities" id="3">Paris</li>
-            <li class="bg-primary rounded text-light savedCities" id="4">Beijing</li>
-            <li class="bg-primary rounded text-light savedCities" id="5">Tokyo</li>
+        <ul id="citySearchHistory">
         </ul>
         </div>
         </div>
@@ -33,7 +27,7 @@
     <div class="col-9">
         <h1 class="text-primary border">Dashboard</h1>
         <div class="container">
-            <h2 class="text-primary" id="cityName">Weather Today</h2>
+            <h2 class="text-primary" id="cityName">Weather Today</h2><img id="weatherIcon"></img>
             <ul class="bg-light bg-gradient" id="weatherToday">
                 <li class="weather-info bg-primary rounded text-light" id="currentSky">Sky</li>
                 <span id="currentSkyDescrip"></span>
@@ -50,21 +44,22 @@
         <div class="container">
             <h2 class="text-primary">Five-Day Forecast</h2>
         <ul class="bg-light bg-gradient" id="fiveDayForecast">
-            <li class="list-inline-item">Monday</li>
-            <article class="card" id="fiveDayTempOne">Temp</article>
-            <li class="list-inline-item">Tuesday</li>
-            <article class="card" id="fiveDayTempTwo">Temp</article>
-            <li class="list-inline-item">Wednesday</li>
-            <article class="card" id="fiveDayTempThree">Temp</article>
-            <li class="list-inline-item">Thursday</li>
-            <article class="card" id="fiveDayTempFour">Temp</article>
-            <li class="list-inline-item">Friday</li>
-            <article class="card" id="fiveDayTempFive">Temp</article>
+            <li class="list-inline-item" id="dateOne">Date</li><img src="" id="dateOneIcon"></img>
+            <article class="card" id="fiveDayTempOne">Weather</article>
+            <li class="list-inline-item" id="dateTwo">Date</li><img src="" id="dateTwoIcon"></img>
+            <article class="card" id="fiveDayTempTwo">Weather</article>
+            <li class="list-inline-item" id="dateThree">Date</img></li><img src="" id="dateThreeIcon">
+            <article class="card" id="fiveDayTempThree">Weather</article>
+            <li class="list-inline-item" id="dateFour">Date</li><img src="" id="dateFourIcon"></img>
+            <article class="card" id="fiveDayTempFour">Weather</article>
+            <li class="list-inline-item" id="dateFive">Date</li><img src="" id="dateFiveIcon"></img>
+            <article class="card" id="fiveDayTempFive">Weather</article>
         </ul>
         </div>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="Assets/js/script.js"></script>
 </body>
 </html>
