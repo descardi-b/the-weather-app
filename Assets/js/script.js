@@ -69,14 +69,37 @@ const citySearch = function () {
                     currentUvIndex.html(`${data.current.uvi}`);
                     currentUvIndex.className = "text-dark";
 
+                    // convert temp to farenheit 
+                    const tempFOne = parseInt((data.daily[1].temp.day) - 273.15) * 9 / 5 + 32;
+
+                    // five day forecast
+                    const fiveDayTempOne = $("#fiveDayTempOne");
+                    fiveDayTempOne.html(`${tempFOne}°F`);
+                    fiveDayTempOne.className = "text-dark";
+
+                    const tempFTwo = parseInt((data.daily[2].temp.day) - 273.15) * 9 / 5 + 32;
+                    const fiveDayTempTwo = $("#fiveDayTempTwo");
+                    fiveDayTempTwo.html(`${tempFTwo}°F`);
+                    fiveDayTempTwo.className = "text-dark";
+
+                    const tempFThree = parseInt((data.daily[3].temp.day) - 273.15) * 9 / 5 + 32;
+                    const fiveDayTempThree = $("#fiveDayTempThree");
+                    fiveDayTempThree.html(`${tempFThree}°F`);
+                    fiveDayTempThree.className = "text-dark";
+
+                    const tempFFour = parseInt((data.daily[4].temp.day) - 273.15) * 9 / 5 + 32;
+                    const fiveDayTempFour = $("#fiveDayTempFour");
+                    fiveDayTempFour.html(`${tempFFour}°F`);
+                    fiveDayTempFour.className = "text-dark";
+
+                    const tempFFive = parseInt((data.daily[5].temp.day) - 273.15) * 9 / 5 + 32;
+                    const fiveDayTempFive = $("#fiveDayTempFive");
+                    fiveDayTempFive.html(`${tempFFive}°F`);
+                    fiveDayTempFive.className = "text-dark";
+
                 });
         });
 };
-
-// pull 
-nameInput.change(function () {
-    console.log(nameInput[0].value);
-});
 
 submitBtn.on("click", citySearch);
 
@@ -93,12 +116,8 @@ savedCities.on("click", function () {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
-            console.log(data.wind.speed);
-            console.log(data.main.temp);
-            console.log(data.main.humidity);
-            console.log(data.weather[0].description);
 
+            // convert temperature from kelvins to farenheit
             const tempF = parseInt((data.main.temp) - 273.15) * 9 / 5 + 32;
             console.log(tempF);
 
@@ -129,9 +148,38 @@ savedCities.on("click", function () {
                     return response.json();
                 })
                 .then(function (data) {
+                    console.log(data);
                     currentUvIndex = $("#currentUvIndexDescrip");
                     currentUvIndex.html(`${data.current.uvi}`);
                     currentUvIndex.className = "text-dark";
+
+                    // convert temp to farenheit 
+                    const tempFOne = parseInt((data.daily[1].temp.day) - 273.15) * 9 / 5 + 32;
+                    const fiveDayTempOne = $("#fiveDayTempOne");
+
+                    // five day forecast
+                    fiveDayTempOne.html(`${tempFOne}°F, ${data.daily[1].weather[0].description}`);
+                    fiveDayTempOne.className = "text-dark";
+
+                    const tempFTwo = parseInt((data.daily[2].temp.day) - 273.15) * 9 / 5 + 32;
+                    const fiveDayTempTwo = $("#fiveDayTempTwo");
+                    fiveDayTempTwo.html(`${tempFTwo}°F, ${data.daily[2].weather[0].description}`);
+                    fiveDayTempTwo.className = "text-dark";
+
+                    const tempFThree = parseInt((data.daily[3].temp.day) - 273.15) * 9 / 5 + 32;
+                    const fiveDayTempThree = $("#fiveDayTempThree");
+                    fiveDayTempThree.html(`${tempFThree}°F, ${data.daily[3].weather[0].description}`);
+                    fiveDayTempThree.className = "text-dark";
+
+                    const tempFFour = parseInt((data.daily[4].temp.day) - 273.15) * 9 / 5 + 32;
+                    const fiveDayTempFour = $("#fiveDayTempFour");
+                    fiveDayTempFour.html(`${tempFFour}°F, ${data.daily[4].weather[0].description}`);
+                    fiveDayTempFour.className = "text-dark";
+
+                    const tempFFive = parseInt((data.daily[5].temp.day) - 273.15) * 9 / 5 + 32;
+                    const fiveDayTempFive = $("#fiveDayTempFive");
+                    fiveDayTempFive.html(`${tempFFive}°F, ${data.daily[5].weather[0].description}`);
+                    fiveDayTempFive.className = "text-dark";
                 });
         });
 });
