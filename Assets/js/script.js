@@ -11,10 +11,6 @@ let citiesSearched;
 const savedCities = $(".savedCities")
 console.log(savedCities)
 
-// test pulling saved cities name value
-// const savedCityNames = savedCities[0].innerText;
-// console.log(savedCityNames);
-
 // target input form
 const nameInput = $("#nameInput");
 console.log(nameInput);
@@ -29,13 +25,7 @@ const uvIndex = $("#uvIndex");
 const weatherIcon = $("#weatherIcon");
 console.log(weatherIcon);
 
-// pull searched cities from local storage
-// if (localStorage.getItem("City Search History")) {
-//     citiesSearched = localStorage.getItem("City Search History");
-// } else {
-//     citiesSearched = [];
-// }
-
+// city search history empty array
 citiesSearched = [];
 
 // user clicks search
@@ -51,9 +41,12 @@ const citySearch = function (cityName) {
 
     // add searched city to local storage
     citiesSearched.push(cityName);
-    console.log(citiesSearched);
     localStorage.setItem("City Search History", citiesSearched);
-    console.log(localStorage.getItem("City Search History"));
+
+    // add current date to top of page
+    const currentDay = $("#currentDay")
+    let currentDayMoment = moment().format("dddd, MMMM Do YYYY");
+    currentDay.html(currentDayMoment);
 
     // append city name to title html
     cityNameTitle.html(`Weather Today in ${cityName}`);
