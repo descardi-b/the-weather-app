@@ -4,9 +4,9 @@ welcome to work day scheduler, the simple and easy-to-use app to organize your g
 
 in this challenge, i was tasked with: <br />
 
-🍓 pulling and displaying weather data from the open weather map api
-🍓 dynamically creating a five-day weather forecast tab
-🍓 creating a method to save and get previously searched cities from local storage
+🍓 pulling and displaying weather data from the open weather map api <br />
+🍓 dynamically creating a five-day weather forecast tab <br />
+🍓 creating a method to save and get previously searched cities from local storage <br />
 
 here are some screenshots of my work:
 
