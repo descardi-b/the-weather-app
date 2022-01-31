@@ -1,6 +1,6 @@
 🌸 hey there! 🌸 <br />
 
-welcome to work day scheduler, the simple and easy-to-use app to organize your girlbossing day ahead. this was created as part of the uc berkeley full stack development course curriculum. <br />
+welcome to the weather app, a quick way to get the forecast for the days ahead. <br />
 
 in this challenge, i was tasked with: <br />
 
